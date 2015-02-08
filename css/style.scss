@@ -1,0 +1,183 @@
+/*
+* Custom variables
+*/
+$main-font: 'Lato', sans-serif;
+$sub-font: 'Montserrat', sans-serif;
+$font-size: 16px;
+
+$black: #000;
+$white: #FFF;
+$grey: #585c65;
+$mediumgrey: #9b9b9b;
+$lightgrey: #eeeeee;
+$blue: #3466a1;
+
+$padding: 10px;
+$margin: 10px;
+
+/*
+* Override Bootstrap variables
+*/
+$font-family-sans-serif: $main-font;
+
+@import 'bootstrap';
+
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+html {
+    background: url(../images/162H.jpg) no-repeat center center fixed;
+    background-size: cover;
+    
+}
+
+body {
+    color: #080824;
+    background-color: transparent;
+}
+
+
+header {
+    background-color: $white;
+    line-height: 1.5;
+    width: 100%;
+    height: auto;  
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    z-index: 99999;
+    }
+
+    h1, h2, p {
+        text-align: center;
+        width: 100%;
+        font-size: 2em;
+        margin: 0;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+
+        span {
+            display: block;
+
+            @media screen and (min-width: $screen-md) {
+                display: inline;
+            }
+        }
+     }
+
+     h2, p {
+        margin: 0 auto;
+
+        @media screen and (min-width: $screen-lg) {
+            width: 100%;
+            margin: 0;
+        }
+     }
+
+header a {
+    color: rgb(27, 182, 188);
+}
+
+.instagram-wrap {
+    width: 97%;
+    max-width: 1400px;
+    margin: 0px auto;
+    padding-top: 230px;
+    font-size: $font-size;
+    background-color: rgba(0, 222, 255, 0.3);
+}
+
+.instagram-content {
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        padding: $padding*5 0;
+//        color: darken($lightgrey, 20%);
+    }
+
+    .photo-box {
+        margin: 0 0 $margin*3 0;
+
+        .image-wrap {
+            img {
+                width: 100%;
+            }
+
+            .likes {
+                position: absolute;
+                bottom: 5px;
+                left: 15px;
+                padding: $padding/2;
+                background: $black;
+                background: rgba($black, 0.4);
+                color: $white;
+            }
+        }
+        .description {
+            font-family: $sub-font;
+            font-size: 12px;
+            background: $black;
+            color: $mediumgrey;
+            letter-spacing: 1px;
+            padding: $padding*1.5;
+            height: 75px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+}
+
+footer {
+//    background: $white;
+    padding: $padding*3 0;
+    text-align: center;
+
+    @media screen and (min-width: $screen-lg) {
+        padding: $padding*10 0;
+    }
+
+    h4 {
+        font-size: 36px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .about-text {
+        padding: 0 $padding*3;
+
+        @media screen and (min-width: $screen-lg) {
+            width: 650px;
+            margin: 0 auto;
+        }
+    }
+
+    
+}
+
+.footer-bottom {
+    background: $white;
+    padding: $padding $padding*6;
+    border-top: 2px solid $lightgrey;
+    letter-spacing: 2px;
+    text-align: center;
+    color: $mediumgrey;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $screen-md) {
+        padding: $padding*4 0;
+    }
+}
+
